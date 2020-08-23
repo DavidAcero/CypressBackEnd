@@ -25,8 +25,27 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('loginToApp', () => {
-    cy.visit('/login')
-    cy.get('[placeholder="Email"]').clear().type('testemail@domain.com')
-    cy.get('[placeholder="Password"]').clear().type('CypressTest1')
-    cy.get('form').submit()
+
+    const userCredentials = {
+        "user": {
+            "email": "testemail@domain.com",
+            "password": "CypressTest1"
+        }
+    }
+
+    cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
+            .its('body').then(body => {
+                const token = body.user.token
+                cy.wrap(token).as('TestToken')
+                cy.visit('/', {
+                    onBeforeLoad(win){
+                        win.localStorage.setItem('jwtToken', token)
+                    }
+                })
+            })
+    
+    // cy.visit('/login')
+    // cy.get('[placeholder="Email"]').clear().type('testemail@domain.com')
+    // cy.get('[placeholder="Password"]').clear().type('CypressTest1')
+    // cy.get('form').submit()
 })

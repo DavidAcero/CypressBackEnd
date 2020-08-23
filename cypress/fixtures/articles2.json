@@ -1,0 +1,23 @@
+{
+    "article": {
+        "title": "How to train your dragon",
+        "slug": "how-to-train-your-dragon-43ehr2",
+        "body": "You have to believe",
+        "createdAt": "2020-08-23T21:13:24.329Z",
+        "updatedAt": "2020-08-23T21:13:24.329Z",
+        "tagList": [
+            "dragons",
+            "angularjs",
+            "reactjs"
+        ],
+        "description": "Ever wonder how?",
+        "author": {
+            "username": "Jy7uyuygyacob",
+            "bio": null,
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": false
+        },
+        "favorited": true,
+        "favoritesCount": 2
+    }
+}

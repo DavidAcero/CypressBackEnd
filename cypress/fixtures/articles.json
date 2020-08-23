@@ -1,0 +1,42 @@
+{
+    "articles": [
+        {
+            "title": "How to train your dragon",
+            "slug": "how-to-train-your-dragon-43ehr2",
+            "body": "You have to believe",
+            "createdAt": "2020-08-23T21:13:24.329Z",
+            "updatedAt": "2020-08-23T21:13:24.329Z",
+            "tagList": [
+                "dragons",
+                "angularjs",
+                "reactjs"
+            ],
+            "description": "Ever wonder how?",
+            "author": {
+                "username": "Jy7uyuygyacob",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 1
+        },
+        {
+            "title": "This is a Title",
+            "slug": "this-is-a-title-u0kbw6",
+            "body": "This is a Body",
+            "createdAt": "2020-08-23T20:36:14.126Z",
+            "updatedAt": "2020-08-23T20:36:14.126Z",
+            "tagList": [],
+            "description": "This is a Description",
+            "author": {
+                "username": "David Acero",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 5
+        }],
+    "articlesCount": 500
+}
