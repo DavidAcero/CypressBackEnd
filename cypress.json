@@ -2,5 +2,15 @@
     "baseUrl": "http://localhost:4200",
     "ignoreTestFiles": "**/examples/*",
     "viewportWidth": 1200,
-    "viewportHeight": 660
+    "viewportHeight": 660,
+    "video":false,
+    "env":{
+      "username": "testemail@domain.com",
+      "password": "CypressTest1",
+      "apiUrl": "https://conduit.productionready.io/"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+      }
 }

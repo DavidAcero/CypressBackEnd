@@ -1,0 +1,6 @@
+{
+    "env":{
+        "username": "someemail@domain.com",
+        "password": "somePassword"
+      }
+}
