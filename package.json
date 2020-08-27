@@ -9,14 +9,14 @@
     "test": "ng test",
     "lint": "ng lint --force",
     "e2e": "ng e2e",
-    "clean:reports": "rm -fr cypress/results/*",
-    "mochawesome:merge":"npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
-    "junit:merge":"npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
+    "clean:reports": "rimraf cypress/results/*",
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
     "prereport": "npm run clean:reports",
     "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
     "cypress:run": "npm run prereport && npx cypress run",
     "cypress:run_qa": "npx cypress run --env configFile=qa",
-    "cypress:e2e": "start-test start http-get://localhost:4200 cypress:run; npm run junit_merge; npm run mochawesome:merge"
+    "cypress:e2e": "start-test start http-get://localhost:4200 cypress:run && npm run junit:merge && npm run mochawesome:merge"
   },
   "pre-commit": [
     "lint"
@@ -62,6 +62,7 @@
     "mochawesome-report-generator": "^5.1.0",
     "pre-commit": "^1.2.2",
     "protractor": "^5.4.2",
+    "rimraf": "^3.0.2",
     "start-server-and-test": "^1.11.3",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
